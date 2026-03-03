@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/logic/helper_methods.dart';
+import 'package:suits/core/logic/input_validator.dart';
 import 'package:suits/core/ui/app_appbar.dart';
 import 'package:suits/core/ui/app_button.dart';
 import 'package:suits/core/ui/app_input.dart';
@@ -35,20 +36,20 @@ class ForgetPasswordView extends StatelessWidget {
               SizedBox(height: 31.h),
               Row(
                 children: [
-                  Expanded(
-                    child: AppButton(onPressed: () {}, buttonTitle: "Email"),
-                  ),
-                  Expanded(
-                    child: AppButton(onPressed: () {}, buttonTitle: "Phone"),
-                  ),
-
-                  // Expanded(child: TextButton(onPressed: () {  }, child: Text(""),),
+                  Expanded(child: AppInput(hintText: "Email",)),
+                  Expanded(child: AppInput(hintText: "phone",)),
                 ],
               ),
+
               SizedBox(height: 16.h),
               AppInput(
                 hintText: "safiaayman@gmail.com",
+                // hintText: "01007698234",
                 prefixIcon: "mail.svg",
+                validator:InputValidator.mailValidator,
+
+                suffixIcon: "right.svg",
+                // suffixIcon: "call.svg",
               ),
               SizedBox(height: 16.h),
 

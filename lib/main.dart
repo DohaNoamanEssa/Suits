@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:suits/views/auth/create_password.dart';
-import 'package:suits/views/auth/forget_password.dart';
-import 'package:suits/views/auth/login.dart';
-import 'package:suits/views/auth/otp.dart';
-import 'package:suits/views/custom_on_boarding.dart';
-import 'package:suits/views/on_boarding.dart';
-import 'package:suits/views/splash.dart';
+import 'package:suits/views/home/pages/favourite.dart';
+import 'package:suits/views/home/pages/home.dart';
+import 'package:suits/views/home/view.dart';
 import 'core/logic/helper_methods.dart';
 
 Future<void> main() async {
@@ -44,7 +40,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
-          home: CreatePasswordView(),
+          home: HomeView(),
         );
       },
     );

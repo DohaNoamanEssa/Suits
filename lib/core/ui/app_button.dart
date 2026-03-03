@@ -6,10 +6,10 @@ import 'package:suits/core/ui/app_image.dart';
 
 class AppButton extends StatelessWidget {
   final String buttonTitle;
-  final Color? buttonColor;
+  final Color? buttonColor,fontColor;
   final VoidCallback? onPressed;
   final String prefixIcon;
-  final bool isIcon, isLoading;
+  final bool   isIcon,isLoading;
   final double? width,height;
 
   const AppButton({
@@ -17,11 +17,12 @@ class AppButton extends StatelessWidget {
     this.buttonColor,
     this.onPressed,
     this.prefixIcon = "",
-    this.isIcon = false,
     this.isLoading = false,
     required this.buttonTitle,
     this.width,
     this.height,
+    this.fontColor,
+    this.isIcon=false,
   });
 
   @override
@@ -33,36 +34,36 @@ class AppButton extends StatelessWidget {
     return Padding(
       padding:  EdgeInsets.only(bottom: 16.0),
       child: FilledButton(
-              style: FilledButton.styleFrom(
+
+        style: FilledButton.styleFrom(
                 backgroundColor:buttonColor ??( (isIcon)? whiteColor: primaryColor) ,
                 minimumSize: Size(width ?? 326.w,height?? 56.h),
               ),
               onPressed: onPressed,
               child:(isIcon)?
-              Row(children: [
-                Padding(
-                  padding:  EdgeInsets.all(8.0),
-                  child: AppImage(image: prefixIcon,width: 30.w,height: 30.h,),
-                ),
-                Expanded(
-                  child: Center(
-                    child: Text(
-                        textAlign: TextAlign.center,
-                        buttonTitle,  style:TextStyle(
-                      color: blackColor,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w600,
-                    )),
-                  ),
-                ),
+      Row(children: [
+        Padding(
+          padding:  EdgeInsets.all(8.0),
+          child: AppImage(image: prefixIcon,width: 30.w,height: 30.h,),
+        ),
+        Expanded(
+          child: Center(
+            child: Text(
+                textAlign: TextAlign.center,
+                buttonTitle,  style:TextStyle(
+              color: blackColor,
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w600,
+            )),
+          ),
+        ),
 
 
-        ],)
-
-                  : Text(
+      ],):
+              Text(
                 buttonTitle,
                 style:TextStyle(
-                  color: Color(0xFFFFFFFF),
+                  color: fontColor ??  Color(0xFFFFFFFF),
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w600,
                 ),
@@ -71,3 +72,5 @@ class AppButton extends StatelessWidget {
     );
   }
 }
+
+

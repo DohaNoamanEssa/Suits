@@ -20,16 +20,23 @@ class AppOTP extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       separatorBuilder: (builder, context) => SizedBox(width: 23.w),
       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+      enableActiveFill: true,
       pinTheme: PinTheme(
         shape: PinCodeFieldShape.box,
         borderRadius: BorderRadius.circular(10.0.r),
-        inactiveColor: whiteColor,
           activeColor: primaryColor,
         selectedColor: primaryColor,
+        inactiveFillColor: whiteColor,
+        activeFillColor: whiteColor,
+        selectedFillColor: whiteColor,
+        // border color
+        inactiveColor:whiteColor,
+
+
+
         fieldHeight: 64.h,
         fieldWidth: 64.w,
         borderWidth: 1.5,
-        errorBorderColor: Colors.red,
 
       ),
     );

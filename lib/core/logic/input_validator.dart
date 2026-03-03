@@ -16,4 +16,13 @@ class InputValidator {
     }
     return null;
   }
+
+  static String? mailValidator(String? value) {
+    if (value!.isEmpty) {
+      return "Mail Must be Not Empty";
+    } else if (value.length < 8) {
+      return "Mail Must be at least 8 Digits and letters";
+    }
+    return null;
+  }
 }

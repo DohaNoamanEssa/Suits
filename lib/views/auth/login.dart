@@ -30,9 +30,9 @@ class LoginView extends StatelessWidget {
               SizedBox(height: 39.h),
               AppInput(hintText: "Enter your email", prefixIcon: "mail.svg"),
               AppInput(
+                isPassword: true,
                 hintText: "Enter your password",
-                prefixIcon: "mail.svg",
-                suffixIcon: "password_visibility.json",
+                prefixIcon: "lock.svg",
                 bottomSpace: 0,
               ),
               Align(

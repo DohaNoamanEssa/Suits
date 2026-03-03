@@ -7,7 +7,7 @@ class AppInput extends StatefulWidget {
   final TextInputType? keyboardType;
   final bool isPassword;
   final VoidCallback? onPressed;
-  final String? suffixIcon,prefixIcon;
+  final String? suffixIcon, prefixIcon;
   final double? bottomSpace;
   final TextEditingController? controller;
   final ValueChanged<String>? onCountryCodeChanged;
@@ -28,8 +28,8 @@ class AppInput extends StatefulWidget {
     this.onCountryCodeChanged,
     this.validator,
     this.hintText,
-    this.maximumLines=1,
-    this.isrReadOnly=false,
+    this.maximumLines = 1,
+    this.isrReadOnly = false,
   });
 
   @override
@@ -58,59 +58,70 @@ class _AppInputState extends State<AppInput> {
               obscureText: widget.isPassword && isHidden,
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Color(0XFFF9FAFB),
-
+                fillColor: whiteColor,
                 counterText: "",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(24.r),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0XFFE5E7EB),
-                  ),
+                  borderSide: BorderSide(color:borderColor),
                   borderRadius: BorderRadius.circular(24.r),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0XFFE5E7EB),
-                  ),
+                  borderSide: BorderSide(color: borderColor),
                   borderRadius: BorderRadius.circular(24.r),
                 ),
                 hintText: widget.hintText,
                 hintStyle: TextStyle(
-                  color: Color(0XFFA1A8B0),
+                  color: hintColor,
                   fontWeight: FontWeight.w400,
-                  fontSize: 16,
+                  fontSize: 16.sp,
                 ),
 
                 suffixIcon: widget.isPassword
                     ? Padding(
                         padding: EdgeInsets.all(12.r),
-                        child: AppImage(
-                          color: hintColor,
-                          image: 'password_visibility.json',
-                          bottomSpace: 0,
-                          width: 20.w,
-                          height: 20.h,
-                          fit: BoxFit.scaleDown,
-                          onLottieClicked: () {
-                            isHidden = !isHidden;
-                            setState(() {});
-                          },
+                        child: ColorFiltered(
+                          colorFilter: ColorFilter.mode(
+                            iconColor,
+                            BlendMode.srcIn,
+                          ),
+                          child: AppImage(
+                            image: 'password_visibility.json',
+                            bottomSpace: 0,
+                            width: 20.w,
+                            height: 20.h,
+                            fit: BoxFit.scaleDown,
+                            onLottieClicked: () {
+                              isHidden = !isHidden;
+                              setState(() {});
+                            },
+                          ),
                         ),
                       )
                     : widget.suffixIcon != null
                     ? Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: AppImage(image: widget.suffixIcon!,color: iconsColor, width: 18, height: 18),
-                    )
+                        padding: EdgeInsets.all(16.r),
+                        child: AppImage(
+                          image: widget.suffixIcon!,
+                          color: iconColor,
+                          width: 18.w,
+                          height: 18.h,
+                        ),
+                      )
                     : null,
-                suffixIconColor: iconsColor,
+                suffixIconColor: iconColor,
 
-                prefixIcon:
-                   AppImage(image: widget.prefixIcon!, width: 24, height: 24),
-                prefixIconColor: Color(0XFFA1A8B0),
-
+                prefixIcon: widget.prefixIcon != null
+                ?Padding(
+                  padding:  EdgeInsets.all(12.r),
+                  child: AppImage(
+                    image: widget.prefixIcon!,
+                    width: 24,
+                    height: 24,
+                  ),
+                ):null,
+                prefixIconColor: iconColor,
               ),
             ),
           ),

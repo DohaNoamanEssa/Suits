@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/core/ui/app_appbar.dart';
-
 import '../../core/ui/app_button.dart';
 import '../../core/ui/app_otp.dart';
 import '../../core/ui/app_resend_otp.dart';
@@ -25,40 +24,45 @@ class _OTPViewState extends State<OTPView> {
       appBar: AppAppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.all(13.0.r),
+          padding: EdgeInsets.all(14.0.r),
 
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text("Verify Code", style: styleOfTitle),
+              Align(
+                  alignment: AlignmentDirectional.topStart,
+                  child: Text("Enter Verification Code", style: styleOfTitle)),
               SizedBox(height: 8.h),
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Color(0xff8E8EA9),
-                    fontWeight: FontWeight.w400,
+              Align(
+                alignment: AlignmentDirectional.topStart,
+                child: RichText(
+                  textAlign: TextAlign.start,
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Color(0xff8E8EA9),
+                      fontWeight: FontWeight.w400,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Enter code that we have sent to your\nnumber ',
+                        style: TextStyle(
+                          fontSize: 14.sp,
+                          color: Color(0xff8E8EA9),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      TextSpan(
+                        text: '08528188***',
+                        style: TextStyle(
+                          height: 2.4.h,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14.sp,
+                          color: Color(0xff434C6D),
+                        ),
+                      ),
+                    ],
                   ),
-                  children: [
-                    TextSpan(
-                      text: 'Enter code that we have sent to your\nnumber ',
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        color: Color(0xff8E8EA9),
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    TextSpan(
-                      text: '08528188***',
-                      style: TextStyle(
-                        height: 2.4.h,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14.sp,
-                        color: Color(0xff434C6D),
-                      ),
-                    ),
-                  ],
                 ),
               ),
               SizedBox(height: 33.h),

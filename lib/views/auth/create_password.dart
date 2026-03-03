@@ -5,7 +5,6 @@ import 'package:suits/core/ui/app_appbar.dart';
 import 'package:suits/core/ui/app_button.dart';
 import 'package:suits/core/ui/app_dialog.dart';
 import 'package:suits/core/ui/app_input.dart';
-import 'package:suits/views/auth/otp.dart';
 
 class CreatePasswordView extends StatelessWidget {
   const CreatePasswordView({super.key});
@@ -38,11 +37,12 @@ class CreatePasswordView extends StatelessWidget {
               ),
               SizedBox(height: 24.h),
 
-              AppInput(isPassword: true, prefixIcon: "mail.svg"),
+              AppInput(isPassword: true, prefixIcon: "lock.svg"),
               AppInput(
                 isPassword: true,
-                prefixIcon: "mail.svg",
+                prefixIcon: "lock.svg",
                 hintText: "Enter your password",
+
               ),
               SizedBox(height: 8.h),
               AppButton(
