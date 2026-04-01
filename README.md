@@ -40,7 +40,6 @@ The app allows users to explore clothing categories, customize their selections,
 
 - 💙 **Flutter** — Cross-platform UI framework
 - 🎯 **Dart** — Programming language
-- 🔥 **Firebase** — Authentication & OTP
 - 🌐 **REST APIs** — Backend communication
 - 🤖 **Android Studio** — Development environment
 
@@ -53,23 +52,6 @@ The app allows users to explore clothing categories, customize their selections,
 - Android Studio or VS Code
 - A connected device or emulator
 
-### Installation
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/DohaNoamanEssa/Suits.git
-
-# 2. Navigate to the project folder
-cd Suits
-
-# 3. Install dependencies
-flutter pub get
-
-# 4. Run the app
-flutter run
-```
-
----
 
 ## 📁 Project Structure
 
