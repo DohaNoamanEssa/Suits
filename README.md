@@ -2,7 +2,6 @@
 
 <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"/>
 <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"/>
-<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/>
 <img src="https://img.shields.io/badge/REST_API-005571?style=for-the-badge&logo=fastapi&logoColor=white"/>
 <img src="https://img.shields.io/badge/Version-1.0.0+1-blue?style=for-the-badge"/>
 
@@ -40,7 +39,6 @@ The app allows users to explore clothing categories, customize their selections,
 
 - 💙 **Flutter** — Cross-platform UI framework
 - 🎯 **Dart** — Programming language
-- 🔥 **Firebase** — Authentication & OTP
 - 🌐 **REST APIs** — Backend communication
 - 🤖 **Android Studio** — Development environment
 
@@ -53,6 +51,21 @@ The app allows users to explore clothing categories, customize their selections,
 - Android Studio or VS Code
 - A connected device or emulator
 
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/DohaNoamanEssa/Suits.git
+
+# 2. Navigate to the project folder
+cd Suits
+
+# 3. Install dependencies
+flutter pub get
+
+# 4. Run the app
+flutter run
+```
 
 ---
 
