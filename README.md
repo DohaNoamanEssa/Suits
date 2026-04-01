@@ -40,6 +40,7 @@ The app allows users to explore clothing categories, customize their selections,
 
 - 💙 **Flutter** — Cross-platform UI framework
 - 🎯 **Dart** — Programming language
+- 🔥 **Firebase** — Authentication & OTP
 - 🌐 **REST APIs** — Backend communication
 - 🤖 **Android Studio** — Development environment
 
@@ -52,6 +53,8 @@ The app allows users to explore clothing categories, customize their selections,
 - Android Studio or VS Code
 - A connected device or emulator
 
+
+---
 
 ## 📁 Project Structure
 
