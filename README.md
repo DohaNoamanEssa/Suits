@@ -1,15 +1,14 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
-<img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" />
-<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
-<img src="https://img.shields.io/badge/REST_API-005571?style=for-the-badge&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"/>
+<img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"/>
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/>
+<img src="https://img.shields.io/badge/REST_API-005571?style=for-the-badge&logo=fastapi&logoColor=white"/>
+<img src="https://img.shields.io/badge/Version-1.0.0+1-blue?style=for-the-badge"/>
 
 # 🧥 Suits App
 
-**A modern Flutter e-commerce app for fashion lovers**
-
-*Browse · Customize · Shop with ease*
+**A modern Flutter e-commerce application for browsing and purchasing fashion products** 👔
 
 </div>
 
@@ -17,61 +16,66 @@
 
 ## 📱 Overview
 
-**Suits App** is a clean and intuitive mobile shopping application built with Flutter. It lets users explore curated fashion collections — blazers, t-shirts, and shoes — customize their picks by size, color, and quantity, then checkout securely in just a few taps.
+**Suits App** is a Flutter-based mobile application designed to provide a smooth and elegant shopping experience for fashion lovers.
 
-The app covers the complete shopping journey: from authentication all the way to order confirmation.
+The app allows users to explore clothing categories, customize their selections, and complete purchases easily and securely — covering the full journey from authentication to order confirmation.
 
 ---
 
 ## ✨ Features
 
-### 🔐 Authentication
-- Login & Sign Up
-- OTP Verification (Phone / Email)
-- Forgot Password & Reset Password
-
-### 🛍️ Product Browsing
-- Browse by category: **Blazer · T-Shirt · Men Shoes · Women Shoes**
-- Filter products by category
-- View product details: image, price, available colors & sizes
-- Select size, color, and quantity
-
-### 🛒 Cart
-- Add / remove products
-- Update item quantity
-
-### 💳 Checkout & Payment
-- Add a payment card
-- Enter shipping address
-- Review order summary
-- Complete checkout
-
-### ✅ Order Confirmation
-- Payment success screen
-- Order confirmation summary
-
-### 👤 Profile
-- Manage personal info
-- Manage addresses
-- Logout
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
+| Feature | Description |
 |---|---|
-| UI Framework | Flutter |
-| Language | Dart |
-| Backend | REST APIs |
-| Auth & OTP | Firebase Authentication |
+| 🔐 **Authentication** | Login, Sign Up, OTP Verification, Forgot & Reset Password |
+| 🛍️ **Product Browsing** | Browse by category with filters and detailed product views |
+| 🎨 **Customization** | Select size, color, and quantity for each product |
+| 🛒 **Shopping Cart** | Add, remove, and update cart items |
+| 💳 **Checkout** | Add payment card, shipping address, and review order |
+| ✅ **Order Confirmation** | Payment success screen and order summary |
+| 👤 **User Profile** | Manage personal info, addresses, and logout |
 
 ---
 
-## 📂 Project Structure
+## 🧠 Technologies Used
+
+- 💙 **Flutter** — Cross-platform UI framework
+- 🎯 **Dart** — Programming language
+- 🔥 **Firebase** — Authentication & OTP
+- 🌐 **REST APIs** — Backend communication
+- 🤖 **Android Studio** — Development environment
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK installed → [flutter.dev](https://flutter.dev/docs/get-started/install)
+- Android Studio or VS Code
+- A connected device or emulator
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/DohaNoamanEssa/Suits.git
+
+# 2. Navigate to the project folder
+cd Suits
+
+# 3. Install dependencies
+flutter pub get
+
+# 4. Run the app
+flutter run
+```
+
+---
+
+## 📁 Project Structure
 
 ```
 lib/
+├── main.dart
 ├── core/               # Constants, themes, utilities
 ├── features/
 │   ├── auth/           # Login, signup, OTP, password reset
@@ -79,10 +83,9 @@ lib/
 │   ├── product/        # Product listing & details
 │   ├── cart/           # Cart management
 │   └── checkout/       # Payment & order flow
-├── models/             # Data models
-├── services/           # API & Firebase services
-├── widgets/            # Shared UI components
-└── main.dart
+├── models/
+├── services/
+└── widgets/
 ```
 
 ---
@@ -103,16 +106,21 @@ lib/
 
 ---
 
-## 👩‍💻 Author
+## 👩🏻‍💻 Developer
 
-**Doha Noaman**
-&nbsp;·&nbsp;
-[![GitHub](https://img.shields.io/badge/GitHub-DohaNoamanEssa-181717?logo=github)](https://github.com/DohaNoamanEssa)
+<div align="center">
+
+**Doha Noaman Essa**
+
+[![Email](https://img.shields.io/badge/Email-doha.noaman.essa%40gmail.com-red?style=flat&logo=gmail)](mailto:doha.noaman.essa@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-DohaNoamanEssa-black?style=flat&logo=github)](https://github.com/DohaNoamanEssa)
+
+</div>
 
 ---
 
 <div align="center">
 
-If you find this project useful, please consider giving it a ⭐ — it means a lot!
+Made with 💙 using Flutter
 
 </div>
